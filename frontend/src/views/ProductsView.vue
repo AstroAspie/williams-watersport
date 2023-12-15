@@ -1,81 +1,160 @@
 <template>
-  <v-card>
-    <v-card-title>Products</v-card-title>
-    <ul>
-      <li v-for="product in products" :key="product.id">
-        <router-link :to="{ name: 'ProductDetail', params: { id: product.id } }">
-          {{ product.name }}
-        </router-link>
-      </li>
-    </ul>
-  </v-card>
+  <div class="page_container">
+    <img class="logo" src="/demo-images/williams-water-sports-logo.png" alt="Jet Ski" />
+    <div class="products_page">
+      <h1>Products</h1>
+      <div class="catalog">
+        <Catalog :items="products.products" />
+      </div>
+    </div>
+  </div>
 </template>
 
 
 <script>
+import Catalog from "@/components/Products/Catalog.vue";
+
 export default {
   name: "ProductsView",
+  components: {Catalog},
+  
   data() {
     return {
       products: {
         "products": [
           {
-            "id": 1,
-            "name": "Single Seater Jet Ski",
-            "description": "A powerful single-seater Jet Ski for adrenaline junkies.",
-            "price_per_hour": 50.00,
-            "max_speed": "96.56 kph",
-            "capacity": 1,
-            "available": true,
-            "image": "/demo-images/jet-ski-1.jpg"
+            id: 1,
+            name: "Single Seater Jet Ski",
+            description: "A powerful single-seater Jet Ski for adrenaline junkies.",
+            price_per_hour: 50.00,
+            max_speed: "96.56 kph",
+            capacity: 1,
+            available: true,
+            image: "/demo-images/jetski_1.jpg"
           },
           {
-            "id": 2,
-            "name": "Double Seater Jet Ski",
-            "description": "A two-seater Jet Ski for couples or friends.",
-            "price_per_hour": 75.00,
-            "max_speed": "88.51 kph",
-            "capacity": 2,
-            "available": true,
-            "image": "/demo-images/jet-ski-2.jpg"
+            id: 2,
+            name: "Double Seater Jet Ski",
+            description: "A powerful double-seater Jet Ski for adrenaline junkies.",
+            price_per_hour: 75.00,
+            max_speed: "96.56 kph",
+            capacity: 2,
+            available: true,
+            image: "/demo-images/jetski_2.jpg"
           },
           {
-            "id": 3,
-            "name": "Family Jet Ski",
-            "description": "A family-friendly Jet Ski that can accommodate up to 4 riders.",
-            "price_per_hour": 100.00,
-            "max_speed": "80.47 kph",
-            "capacity": 4,
-            "available": false,
-            "image": "/demo-images/jet-ski-3.jpg"
-          },
-          {
-            "id": 4,
-            "name": "Racing Jet Ski",
-            "description": "A high-performance Jet Ski designed for racing enthusiasts.",
-            "price_per_hour": 120.00,
-            "max_speed": "112.65 kph",
-            "capacity": 1,
-            "available": true,
-            "image": "/demo-images/jet-ski-4.jpg"
-          },
-          {
-            "id": 5,
-            "name": "Luxury Jet Ski",
-            "description": "A luxurious Jet Ski for those who want to ride in style.",
-            "price_per_hour": 150.00,
-            "max_speed": "80.47 kph",
-            "capacity": 1,
-            "available": true,
-            "image": "/demo-images/jet-ski-5.jpg"
+            id: 3,
+            name: "Triple Seater Jet Ski",
+            description: "A powerful triple-seater Jet Ski for adrenaline junkies.",
+            price_per_hour: 100.00,
+            max_speed: "96.56 kph",
+            capacity: 3,
+            available: true,
+            image: "/demo-images/jetski_3.jpg"
           }
-        ]
-      }
+      ]
     }
   }
+},
 };
 </script>
 
 <style scoped>
+.page_container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  height: 68vh;
+}
 
+.logo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  z-index: -1;
+}
+
+.products_page {
+  display: flex;
+  margin: 4rem;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+}
+
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  width: 300px;
+}
+
+.catalog-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.catalog-item h2 {
+  margin: 0;
+}
+
+.catalog-item p {
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    width: 100%;
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalog {
+    width: 100%;
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .catalog {
+    width: 100%;
+    max-width: 1920px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .catalog {
+    width: 100%;
+    max-width: 2560px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .catalog {
+    width: 100%;
+    max-width: 3840px;
+  }
+}
+
+@media (min-width: 5120px) {
+  .catalog {
+    width: 100%;
+    max-width: 5120px;
+  }
+}
 </style>

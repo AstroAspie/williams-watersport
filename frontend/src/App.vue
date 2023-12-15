@@ -1,8 +1,10 @@
 <template>
-  <header>
-    <NavBar />
-  </header>
-  <RouterView />
+  <div>
+    <header>
+      <NavBar />
+    </header>
+    <RouterView />
+  </div>
 </template>
 
 <script>

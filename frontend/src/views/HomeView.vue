@@ -5,8 +5,8 @@
       <img class='logo' src="/demo-images/williams-water-sports-logo.png" alt="williams water sport">
     </section>
     <v-btn
-      color="primary"
-      class="mt-10"
+      color="success"
+      class="btn"
       @click="$router.push('/products')"
     >View Products</v-btn>
   </v-main>
@@ -24,7 +24,7 @@ export default {
 }
 </script> 
 
-<style scoped>
+<style scoped>y
 .main {
   height: 100vh;
   display: flex;
@@ -34,7 +34,18 @@ export default {
 }
 
 .logo {
-  opacity: 0.5;
+  position: absolute;
+  height: 90vh;
+  width: 100%;
+  opacity: 0.03;
+  z-index: -1;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
 }
 
 @media (min-width: 1024px) {
