@@ -1,9 +1,7 @@
 <template>
-  <section class="catalog">
-    <div v-for="item in items" :key="item.name">
-      <Catalog_Item :product="item" />
-    </div>
-  </section>
+  <div v-for="item in items" :key="item.name" class="catalog">
+    <Catalog_Item :product="item" />
+  </div>
 </template>
 
 <script>
@@ -34,11 +32,9 @@ export default {
 <style scoped>
 .catalog {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0 auto;
-  padding: 2rem;
-  max-width: 1200px;
+  justify-content: space-around;
+  margin: 10px;
 }
 </style>

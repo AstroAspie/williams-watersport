@@ -1,10 +1,14 @@
 <template>
-  <div class="page_container">
-    <img class="logo" src="/demo-images/williams-water-sports-logo.png" alt="Jet Ski" />
-    <div class="products_page">
-      <h1>Products</h1>
-      <div class="catalog">
-        <Catalog :items="products.products" />
+  <div>
+    <div class="page_header">
+      <h1>Jet skis</h1>
+    </div>
+    <div class="page_container">
+      <img class="logo" src="/demo-images/williams-water-sports-logo.png" alt="Williams Water Sport" />
+      <div class="products_page">
+        <div class="catalog">
+          <Catalog :items="products.products" />
+        </div>
       </div>
     </div>
   </div>
@@ -60,6 +64,14 @@ export default {
 </script>
 
 <style scoped>
+
+.page_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
 .page_container {
   display: flex;
   justify-content: center;
@@ -68,7 +80,9 @@ export default {
 }
 
 .logo {
-  position: absolute;
+  position: fixed;
+  top: 30px;
+  left: 10px;
   width: 100%;
   height: 100%;
   opacity: 0.03;
@@ -80,40 +94,6 @@ export default {
   margin: 4rem;
   border-radius: 5px;
   width: 100%;
-}
-
-.catalog {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 4rem;
-}
-
-.catalog-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-  padding: 1rem;
-  border: 1px solid var(--color-border);
-  border-radius: 5px;
-  width: 300px;
-}
-
-.catalog-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.catalog-item h2 {
-  margin: 0;
-}
-
-.catalog-item p {
-  margin: 0;
 }
 
 @media (min-width: 1024px) {
