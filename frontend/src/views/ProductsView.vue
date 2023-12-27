@@ -8,6 +8,7 @@
       <div class="products_page">
         <div class="catalog">
           <Catalog :items="products.products" />
+          <BaseFooter />
         </div>
       </div>
     </div>
@@ -17,11 +18,14 @@
 
 <script>
 import Catalog from "@/components/Products/Catalog.vue";
+import BaseFooter from "@/components/Base/Footer.vue";
 
 export default {
   name: "ProductsView",
-  components: {Catalog},
-  
+  components: {
+    Catalog,
+    BaseFooter,
+  },
   data() {
     return {
       products: {

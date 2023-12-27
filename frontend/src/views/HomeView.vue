@@ -1,15 +1,11 @@
 
 <template>
-  <v-main>
-    <section class="main">
-      <img class='logo' src="/demo-images/williams-water-sports-logo.png" alt="williams water sport">
-    </section>
-    <v-btn
-      color="success"
-      class="btn"
-      @click="$router.push('/products')"
-    >View Products</v-btn>
-  </v-main>
+  <div class="main">
+    <img class="logo" src="../assets/logo.png" alt="logo" />
+    <div v-if="user.active_rentals.length >= 1">
+      
+    </div>
+  </div>
 </template>
 
 
@@ -18,9 +14,21 @@ export default {
   name: 'HomeView',
   data() {
     return {
-       
+       user: null,
     }
   },
+  mounted() {
+    this.user = this.getUser();
+  },
+  methods: {
+    getUser() {
+      return {
+        name: 'John Doe',
+        email: 'test@john.com',
+        active_rentals: {}
+      };
+    }
+  }
 }
 </script> 
 
