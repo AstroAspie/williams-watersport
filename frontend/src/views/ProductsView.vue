@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <div class="page_header">
-      <h1>Jet skis</h1>
-    </div>
+  <div class="products_page">
+    <img class="logo" src="@/assets/williams-water-sports-logo.png" alt="logo" />
     <div class="page_container">
-      <img class="logo" src="/demo-images/williams-water-sports-logo.png" alt="Williams Water Sport" />
-      <div class="products_page">
-        <div class="catalog">
-          <Catalog :items="products.products" />
-          <BaseFooter />
+      <div class="catalog">
+        <div class="page_header">
+          <h1>Jet Skis</h1>
         </div>
+        <Catalog :items="products.products" />
+        <BaseFooter />
       </div>
     </div>
   </div>

@@ -1,18 +1,16 @@
 <template>
   <div class="footer">
-    <div class="container">
-      <div class="footer-links">
-        <router-link
-            v-for="link in links"
-            :key="link.name"
-            :to="link.path"
-            class="footer-links"
-            exact
-            active-class="active"
-        >
-          {{ link.name }}
-        </router-link>
-      </div>
+    <div class="footer-links">
+      <router-link
+          v-for="link in links"
+          :key="link.name"
+          :to="link.path"
+          class="footer-links"
+          exact
+          active-class="active"
+      >
+        {{ link.name }}
+      </router-link>
     </div>
   </div>
 </template>
@@ -36,7 +34,7 @@ export default {
 
 <style scoped>
 .footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   margin: 0 auto;

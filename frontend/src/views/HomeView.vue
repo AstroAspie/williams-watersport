@@ -1,11 +1,5 @@
-
 <template>
-  <div class="main">
-    <img class="logo" src="../assets/logo.png" alt="logo" />
-    <div v-if="user.active_rentals.length >= 1">
-      
-    </div>
-  </div>
+  
 </template>
 
 
