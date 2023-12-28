@@ -50,5 +50,4 @@ export default {
   height: 4rem;
   color: #00c4be;
 }
-
 </style>

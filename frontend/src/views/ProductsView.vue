@@ -71,13 +71,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  margin: 10px;
 }
 
 .page_container {
   display: flex;
   justify-content: center;
-  padding: 2rem;
   height: 68vh;
 }
 
@@ -93,7 +92,6 @@ export default {
 
 .products_page {
   display: flex;
-  margin: 4rem;
   border-radius: 5px;
   width: 100%;
 }
