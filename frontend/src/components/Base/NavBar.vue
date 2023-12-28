@@ -13,6 +13,9 @@
           {{ link.name }}
         </router-link>
       </div>
+      <div class="user-links">
+        <Button v-if="!user" @click="userLogin">Login</Button>
+      </div>
     </div>
   </nav>
 </template>
@@ -22,12 +25,18 @@ export default {
   name: "NavBar",
   data() {
     return {
+      user: null,
       links: [
         { name: "Home", path: "/" },
         { name: "Products", path: "/products" },
         { name: "Contact", path: "/contact"}
       ],
     };
+  },
+  methods: {
+    userLogin() {
+      
+    },
   },
 };
 </script>
